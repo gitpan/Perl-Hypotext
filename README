@@ -11,6 +11,7 @@ To install the module:
 
 Changes
 
+0.25 - Bug Fix: Internal package clean now works correctly.
 0.25 - Name Change: Was stomping on a Template Toolkit module. Doh!
 
 --

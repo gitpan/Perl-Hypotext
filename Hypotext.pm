@@ -16,7 +16,7 @@ use vars qw( @ISA $VERSION );
 use Parse::Tokens;
 @ISA = ('Parse::Tokens');
 
-$VERSION = 0.25;
+$VERSION = 0.26;
 
 sub new
 {
@@ -154,7 +154,7 @@ sub _uninstall
 	no strict 'refs';
 	for( keys %{$hash} )
 	{
-		*{$package."$_"} = \'';
+		*{$package."::$_"} = \'';
 	}
 	use strict;
 	return 1;
@@ -259,6 +259,7 @@ Returns the fully parsed and evaluated text.
 
 =head1 CHANGES
 
+0.26 - Bug Fix: Internal package cleanup now works correctly when using hashes. REALLY!
 0.25 - Name Change: Was stomping on a Template Toolkit module. Doh!
 0.24 - Bug Fix: Internal package cleanup now works correctly when using hashes.
 0.23 - Can now specify a package underwhich to install a hash (was explicitly 'Safe'). This also means that the package name must be set prior to or at the time of installation of a hash, or not at all.
