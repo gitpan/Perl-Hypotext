@@ -1,0 +1,19 @@
+This is the Perl::Hypotext module.
+
+Perl::Hypotext provides perl token evaluation within the context of a text tempalate. Indeed, another template module.
+
+To install the module:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+Changes
+
+0.25 - Name Change: Was stomping on a Template Toolkit module. Doh!
+
+--
+Steve McKay
+steve@colgreen.com
+
